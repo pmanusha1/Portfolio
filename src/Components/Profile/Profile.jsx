@@ -1,21 +1,58 @@
-import React from 'react'
-import profile from '../../assets/profile-img.avif'
-import './Profile.css'
+import React from 'react';
+import './Profile.css';
+import { motion } from 'framer-motion';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const Profile = () => {
-  return (
-    <div id='profile' className='profile'>
-        <div class="image-cropper">
-          <img src={profile} alt="avatar" class="profile-pic" />
-        </div>
-        <h1><span>I’m Manusha Pasula</span>, Developer based in Hyderabad</h1>
-        <p>I am a developer from Hyderabad with 2 year of experience in Wipro Technologies.</p>
-        <div className='profile-action'>
-            <div className='profile-connect'>Connect with me</div>
-            <div className='profile-resume'>My Resume</div>
-        </div>
-    </div>
-  )
-}
+const Profile = () => (
+  <section id="home" className="profile-section dark-section">
+    
+    <motion.h1 
+      className="profile-name"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
+      Hi, I’m <span>Manusha Pasula</span>
+    </motion.h1>
 
-export default Profile
+    <motion.h2 
+      className="profile-role"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+    >
+      JavaScript Developer
+    </motion.h2>
+
+    <motion.p 
+      className="profile-desc"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.6 }}
+    >
+      I build modern, responsive, and interactive web applications.  
+      With 2+ years at Wipro Technologies, I specialize in crafting seamless user experiences using JavaScript, ReactJS and Node.js.
+    </motion.p>
+
+    <motion.div 
+      className="profile-actions"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, duration: 0.6 }}
+    >
+      <AnchorLink className="btn-connect" offset={50} href="#contact">
+        Connect
+      </AnchorLink>
+      <a 
+        className="btn-resume" 
+        href="/Manusha-Pasula-Resume.pdf" 
+        download
+      >
+        Resume
+      </a>
+    </motion.div>
+
+  </section>
+);
+
+export default Profile;

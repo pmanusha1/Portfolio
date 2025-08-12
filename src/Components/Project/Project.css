@@ -1,94 +1,70 @@
-.project{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 80px 170px;
-    gap: 50px;
+.dark-section {
+  background: #121212;
+  color: #e0e0e0;
+  padding: 5rem 1rem;
 }
 
-.project-title{
-    font-size: 40px;
-    font-weight: 600;
-    padding: 0px 30px;
-    background: linear-gradient(267deg, #62cff4 10%, #2c67f2 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(267deg, #62cff4 10%, #2c67f2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.project-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 50px;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
-.project-format{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 60px;
-    border-radius: 10px;
-    border: 2px solid white;
-    transition: 0.4s;
-    cursor: pointer;
+.project-item {
+  background: #1e1e1e;
+  padding: 1.8rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
-.project-format h2{
-    font-size: 26px;
-    font-weight: 800;
-    background: linear-gradient(267deg, #62cff4 10%, #2c67f2 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.project-item:hover {
+  transform: translateY(-6px);
+  border-color: #2c67f2;
+  box-shadow: 0 4px 14px rgba(44, 103, 242, 0.2);
 }
 
-.project-format p{
-    max-width: 550px;
+.proj-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
 }
 
-.tools{
-    background: linear-gradient(267deg, #62cff4 10%, #2c67f2 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.proj-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #ccc;
 }
 
-.project-format:hover{
-    border: 2px solid #2c67f2;
-    transform: scale(1.05);
-    transition: 0.4s;
+.proj-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-@media(max-width:768px){
-    .project{
-        align-items: start;
-        gap: 70px;
-        margin: 20px 70px;
-    }
+.tool-tag {
+  background: #1f1f1f;
+  border: 1px solid #2c67f2;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: #62cff4;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-    .project-title h2{
-        padding: 0;
-        font-size: 40px;
-    }
-
-    .project-format{
-        gap: 20px;
-        padding: 22px;
-    }
-
-    .project-format h2{
-        font-size: 24px;
-    }
-
-    .project-format p{
-        font-size: 18px;
-    }
-
-    .project-container{
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+.tool-tag:hover {
+  background: #2c67f2;
+  color: #fff;
 }
