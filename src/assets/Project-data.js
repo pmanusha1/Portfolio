@@ -1,13 +1,13 @@
 const Project_data =[
     {
-        title: "Portfolio application",
-        desc: "Developed a web application that serves as a digital resume, providing visitors with an interactive way to learn about my skills, projects, and experience. ",
-        tools: "JavaScript, ReactJS, CSS"
+        title: "QnA platform",
+        desc: "Built an interactive QnA interface with Material UI, enabling users to post, upvote, and filter questions in real time with secure JWT-based authentication. Integrated GraphQL queries and mutations to support dynamic content updates and smooth user workflows.",
+        tools: "JavaScript, Node.js, Apollo Server(GraphQL), MongoDB, JWT, Material UI"
     },
     {
-        title: "Todo Application",
-        desc: "Developed a task management application with a clean, responsive UI for creating, editing, and deleting tasks. The backend was built using NestJS with RESTful APIs to ensure efficient task handling. MongoDB was used for reliable and scalable data storage.",
-        tools: "JavaScript, ReactJS, NestJS, MongoDB, CSS"
+        title: "Password Management Utility",
+        desc: "Developed a secure password generator with breach validation using the HaveIBeenPwned API and custom security rules. Integrated Slack webhooks for encrypted password delivery and implemented Jest test coverage to ensure reliability and maintainability.",
+        tools: "JavaScript, React.js, Express.js, Jest, Slack API, HIBP API"
     },
     {
         title: "Chat Application",
